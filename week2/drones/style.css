@@ -43,6 +43,9 @@ h2 {
 
 h3 {
   text-align: center;
+  background-color: cadetblue;
+  height: 60px;
+  padding-top: 20px;
 }
 
 .grid-floats .grid-item:first-child {
@@ -79,6 +82,8 @@ ul {
 section .grid-floats .grid-item p {
   text-align: center;
   margin-top: 50px;
+  background-color: rgb(20, 99, 233,.2);
+  
 }
 main section .grid-floats .grid-item:first-child p {
   margin-top: 70px !important ;
@@ -123,6 +128,7 @@ ul li:hover {
 .grid-flex .grid-item p {
   text-align: center;
   margin-top: 45px;
+  background-color: rgb(20, 99, 233,.2);
 }
 
 .grid-flex .grid-item:first-child {
@@ -138,11 +144,11 @@ ul li:hover {
 }
 
 /* .................. media for tablet .............. */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
    
   main {
-      width: 100%;
-      margin-right: 0 !important;
+    width: 100%;
+    margin-right: 0 !important;
     position: relative;
     overflow-x: hidden;
   }
@@ -150,6 +156,7 @@ ul li:hover {
     width: 24.3%;
     height: 500px;
     margin: 0.4em;
+    float: left;
   }
   .grid-floats .grid-item:first-child {
     width: 38%;
@@ -178,50 +185,73 @@ ul li:hover {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600PX) {
   body {
-    /* width: 600px; */
+    width: 100%;
   }
   main {
-    overflow-x: hidden;
+    overflow-x:hidden;
   }
   main section .grid-floats {
     padding: 1em;
   }
 
   .grid-floats .grid-item {
-    width: 550px;
+    width: 80%;
     height: 550px;
-    margin: 2em;
-    margin-left: 24%;
+    margin: auto;
+    float: none;
   }
   .grid-floats .grid-item:first-child {
-    width: 550px;
+    width: 80%;
     height: 550px;
-    margin-left: 24%;
+    margin: auto;
   }
   .grid-floats .grid-item:nth-child(2) {
-    width: 550px;
+    width: 80%;
     height: 550px;
+    margin: auto;
   }
+  .grid-floats .grid-item:first-child img {
+    padding-left: 20%;
+  }
+  .grid-floats .grid-item:nth-child(2) img {
+    padding-left: 20%;
+  }
+  .grid-floats .grid-item img {
+    padding-left: 20%;
+  }
+  .grid-floats .grid-item p {
+    font-size: 1.8rem;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+  }
+  
   main section .grid-flex {
     flex-direction: column;
   }
   .grid-flex .grid-item {
-    width: 550px;
+    width: 85%;
     height: 550px;
-    margin: 2em;
-    margin-left: 15%;
+    margin-right: 2em;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
   }
   .grid-flex .grid-item:first-child {
-    width: 550px;
+    width: 85%;
     height: 550px;
-    margin-left: 15%;
+    
+
   }
   .grid-flex .grid-item:nth-child(2) {
-    width: 550px;
+    width: 85%;
     height: 550px;
-    margin-left: 15%;
+    
+
+  }
+  .grid-flex .grid-item p {
+    font-size: 1.8rem;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
   }
 }
