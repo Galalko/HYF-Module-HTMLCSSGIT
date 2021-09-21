@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* width: 200px; */
+  /* border: solid red 1px; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body {
+  /* margin: 0 auto; */
+  min-width: 1024px;
+}
+
+section {
+  clear: both;
+  /* margin-bottom: 135rem; */
+}
+.grid-floats {
+  overflow: hidden;
+  background-color: #fff;
+}
+.grid-flex {
+  background-color: #fff;
+  padding-left: 10%;
+}
+
+h1 {
+  text-align: center;
+  align-items: center;
+  padding-bottom: 20px;
+  margin: 10px 0;
+}
+
+h2 {
+  background-color: rgb(138, 133, 133, 0.4);
+  color: rgb(59, 57, 57);
+  font-family: "Lucida Sans", "Lucida Sans Regular";
+  padding: 35px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.grid-floats .grid-item:first-child {
+  width: 498px;
+  height: 500px;
+  margin-left: 4px;
+}
+ul {
+  padding-left: 10%;
+}
+
+.grid-floats .grid-item {
+  float: left;
+  margin: 10px 4px;
+  padding: 5px;
+  width: 238px;
+  height: 500px;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: #fff;
+  list-style-type: none;
+  border: rgb(228, 217, 217) solid 2px;
+}
+.grid-floats .grid-item img {
+  width: 50%;
+  padding: 2rem;
+  padding-top: 50px;
+  height: 180px;
+  margin-left: 30px;
+}
+
+/* .............. */
+
+section .grid-floats .grid-item p {
+  text-align: center;
+  margin-top: 50px;
+}
+main section .grid-floats .grid-item:first-child p {
+  margin-top: 70px !important ;
+}
+main section .grid-floats .grid-item:first-child img {
+  margin-left: 90px !important ;
+}
+
+/* ................Grid with flexbox.......... */
+main .grid-flex {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  /* justify-content: flex-start; */
+  align-items: start;
+}
+.grid-flex .grid-item {
+  /*margin: 10px 4px;*/
+  margin-left: 6px;
+  margin-top: 5px;
+  padding: 5px;
+  width: 238px;
+  height: 500px;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: white;
+  border: rgb(228, 217, 217) solid 2px;
+  border-radius: 5px;
+}
+ul li:hover {
+  box-shadow: 5px 5px 10px 10px rgba(158, 9, 9, 0.699);
+  transition: 0.8s;
+  color: rgb(128, 122, 122);
+}
+.grid-flex .grid-item img {
+  width: 50%;
+  padding: 2rem;
+  padding-top: 50px;
+  height: 180px;
+  margin-left: 30px;
+}
+.grid-flex .grid-item p {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.grid-flex .grid-item:first-child {
+  width: 495px;
+  height: 500px;
+  /* margin-left: -5px;*/
+}
+.grid-flex .grid-item:first-child p {
+  margin-top: 65px !important ;
+}
+.grid-flex .grid-item:first-child img {
+  margin-left: 90px !important ;
+}
+
+/* .................. media for tablet .............. */
+@media only screen and (max-width: 1024px) {
+   
+  main {
+      width: 100%;
+      margin-right: 0 !important;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .grid-floats .grid-item {
+    width: 24.3%;
+    height: 500px;
+    margin: 0.4em;
+  }
+  .grid-floats .grid-item:first-child {
+    width: 38%;
+    height: 500px;
+  }
+  main section .grid-floats li:nth-child(2) {
+    width: 38%;
+    height: 500px;
+  }
+  main .grid-flex {
+    flex-direction: row;
+  }
+  .grid-flex .grid-item {
+    width: 25.5%;
+    height: 500px;
+    margin: 1%;
+  }
+  .grid-flex .grid-item:first-child {
+    width: 40%;
+    height: 500px;
+    margin-left: 1%;
+  }
+  .grid-flex .grid-item:nth-child(2) {
+    width: 40%;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    /* width: 600px; */
+  }
+  main {
+    overflow-x: hidden;
+  }
+  main section .grid-floats {
+    padding: 1em;
+  }
+
+  .grid-floats .grid-item {
+    width: 550px;
+    height: 550px;
+    margin: 2em;
+    margin-left: 24%;
+  }
+  .grid-floats .grid-item:first-child {
+    width: 550px;
+    height: 550px;
+    margin-left: 24%;
+  }
+  .grid-floats .grid-item:nth-child(2) {
+    width: 550px;
+    height: 550px;
+  }
+  main section .grid-flex {
+    flex-direction: column;
+  }
+  .grid-flex .grid-item {
+    width: 550px;
+    height: 550px;
+    margin: 2em;
+    margin-left: 15%;
+    flex-direction: row;
+  }
+  .grid-flex .grid-item:first-child {
+    width: 550px;
+    height: 550px;
+    margin-left: 15%;
+  }
+  .grid-flex .grid-item:nth-child(2) {
+    width: 550px;
+    height: 550px;
+    margin-left: 15%;
+  }
+}
