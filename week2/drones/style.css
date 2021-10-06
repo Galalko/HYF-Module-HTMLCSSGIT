@@ -5,69 +5,65 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 body {
-  margin: 0 auto; 
+  margin: 0 auto;
   max-width: 1024px;
 }
 
 h1 {
-    text-align: center;
-    align-items: center;
-    padding-bottom: 20px;
-    margin: 10px 0;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 20px;
+  margin: 10px 0;
 }
 
 h2 {
-    background-color: rgb(138, 133, 133, 0.4);
-    color: rgb(59, 57, 57);
-    font-family: "Lucida Sans", "Lucida Sans Regular";
-    padding: 35px;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px;
+  background-color: rgb(138, 133, 133, 0.4);
+  color: rgb(59, 57, 57);
+  font-family: "Lucida Sans", "Lucida Sans Regular";
+  padding: 35px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h3 {
-    text-align: center;
-    background-color: cadetblue;
-    height: 60px;
-    padding-top: 20px;
+  text-align: center;
+  background-color: cadetblue;
+  height: 60px;
+  padding-top: 20px;
 }
-  
 
 /* grid float */
 
-
 .grid-floats .grid-item:first-child {
-  width: 480px;
+  width: 49%;
   height: 500px;
- 
 }
 
 .grid-floats {
-    text-align: center;
-    list-style: none;
-    padding: 1em;
+  text-align: center;
+  list-style: none;
+  padding: 1em;
 }
 
 .grid-floats::after {
-    display: table;
-    content: "";
-    clear: both;
+  display: table;
+  content: "";
+  clear: both;
 }
 
 section .grid-floats .grid-item p {
-    text-align: center;
-    margin-top: 50px;
-    background-color: rgb(20, 99, 233,.2);
-    
+  text-align: center;
+  margin-top: 50px;
+  background-color: rgb(20, 99, 233, 0.2);
 }
 
 .grid-floats .grid-item {
   float: left;
-  margin: 10px 4px;
+  margin: 10px 0.5%;
   padding: 5px;
-  width: 238px;
+  width: 24%;
   height: 500px;
   text-decoration: none;
   overflow: hidden;
@@ -76,13 +72,11 @@ section .grid-floats .grid-item p {
   border: rgb(228, 217, 217) solid 2px;
 }
 .grid-floats .grid-item img {
-  
   padding: 2rem;
   padding-top: 50px;
   height: 180px;
   margin-left: 30px;
 }
-
 
 /* ................Grid with flexbox.......... */
 
@@ -95,16 +89,17 @@ main .grid-flex {
 }
 
 .grid-flex::after {
-    display: table;
-    content: "";
-    clear: both;
+  display: table;
+  content: "";
+  clear: both;
 }
 
 .grid-flex .grid-item {
-  margin-left: 6px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
   margin-top: 5px;
   padding: 5px;
-  width: 238px;
+  width: 24%;
   height: 500px;
   text-decoration: none;
   overflow: hidden;
@@ -128,73 +123,59 @@ ul li:hover {
 .grid-flex .grid-item p {
   text-align: center;
   margin-top: 45px;
-  background-color: rgb(20, 99, 233,.2);
+  background-color: rgb(20, 99, 233, 0.2);
   font-size: 14px;
 }
 
 .grid-flex .grid-item:first-child {
-  width: 480px;
+  width: 49%;
   height: 500px;
-  
 }
-
 
 /* .................. media for tablet .............. */
 @media only screen and (max-width: 1023px) {
+  body {
+    margin: 0 auto;
+  }
 
-    body {
-        margin: 0 auto; 
-    }
-   
-  /* main {
-    width: 100%;
-    margin-right: 0 !important;
-    position: relative;
-    overflow-x: hidden;
-    
-  } */
   .grid-floats .grid-item {
-    width: 24.3%;
+    width: calc(33% - 0.8rem);
     height: 500px;
     margin: 0.4em;
     float: left;
-    
-    
   }
   .grid-floats .grid-item:first-child {
-    width: 38%;
+    width: calc(50% - 0.8rem);
     height: 500px;
   }
   main section .grid-floats li:nth-child(2) {
-    width: 38%;
+    width: calc(50% - 1.3rem);
     height: 500px;
   }
   main .grid-flex {
     flex-direction: row;
   }
   .grid-flex .grid-item {
-    width: 25.5%;
+    width: calc(33% - 0.8rem);
     height: 500px;
-    margin: 1%;
+    margin: 0.4em;
   }
   .grid-flex .grid-item:first-child {
-    width: 40%;
+    width: calc(50% - 0.9rem);
     height: 500px;
     margin-left: 1%;
   }
   .grid-flex .grid-item:nth-child(2) {
-    width: 40%;
+    width: calc(50% - 0.9rem);
     height: 500px;
   }
 }
 
-@media only screen and (max-width: 600PX) {
+@media only screen and (max-width: 600px) {
   body {
     width: 100%;
   }
-  /* main {
-    overflow-x:hidden;
-  } */
+
   main section .grid-floats {
     padding: 1em;
   }
@@ -228,10 +209,10 @@ ul li:hover {
   }
   .grid-floats .grid-item p {
     font-size: 1.2rem;
-    font-family:  Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, Times, "Times New Roman", serif;
   }
   /* flex */
-  
+
   main section .grid-flex {
     flex-direction: column;
     align-items: center;
@@ -244,17 +225,13 @@ ul li:hover {
   .grid-flex .grid-item:first-child {
     width: 80%;
     height: 550px;
-    
-
   }
   .grid-flex .grid-item:nth-child(2) {
     width: 80%;
     height: 550px;
-    
-
   }
   .grid-flex .grid-item p {
     font-size: 1.4rem;
-    font-family:  Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, Times, "Times New Roman", serif;
   }
 }
